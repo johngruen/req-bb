@@ -106,8 +106,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default',[]);
   grunt.registerTask('lint',['jshint']);
-  grunt.registerTask('build');
-  grunt.registerTask('go',['connect','watch']);
-
-
+  grunt.registerTask('build',['bower','copy','sass','autoprefixer','jade','clean']);
+  grunt.registerTask('server',['connect','watch']);
 };
